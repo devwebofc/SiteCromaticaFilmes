@@ -1,0 +1,366 @@
+/* ===== RESPONSIVIDADE ===== */
+/* Telas grandes (desktops, 1200px para cima) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* ===== Counters ===== */
+@media (max-width: 900px) {
+    .counters-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+    .counters-grid { grid-template-columns: 1fr; }
+    .counter-value { font-size: 2.6rem; }
+}
+
+/* ===== Contato ===== */
+@media (max-width: 560px) {
+    .contato-form .btn-primary { width: 100%; }
+}
+
+/* ===== Mapa / Localização ===== */
+@media (max-width: 768px) {
+    .mapa { padding: 50px 0; }
+    .mapa .section-title { font-size: 2rem; }
+    .mapa-container { height: 350px; }
+    .endereco p { font-size: 1rem; flex-direction: column; }
+}
+
+/* Desktops médios (992px - 1199px) */
+@media (max-width: 1199.98px) {
+    .hero h1 {
+        font-size: 4.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.3rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Tablets (768px - 991px) */
+@media (max-width: 991.98px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .section {
+        padding: 60px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .contato-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-inline: 1.5rem;
+    }
+    
+    .sobre-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .sobre-texto {
+        width: 100%;
+    }
+    
+    /* Sobre */
+    .sobre-content {
+        flex-direction: column;
+    }
+    .sobre-imagem {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .sobre-texto { text-align: center; }
+    .sobre-texto h3::after { left: 50%; transform: translateX(-50%); }
+
+    /* Equipe */
+    .membro-card { flex-direction: column; }
+    .membro-card.reverse { flex-direction: column-reverse; }
+    .membro-foto {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 2rem 2rem 0;
+    }
+    .membro-conteudo { padding: 1.5rem 2rem 2.5rem; }
+    .frase-destaque { font-size: 1.3rem; }
+    .membro-info h3 { font-size: 1.6rem; }
+}
+
+/* Tablets pequenos (576px - 767px) */
+@media (max-width: 767.98px) {
+    html {
+        font-size: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: var(--transition);
+        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .nav-links a {
+        color: var(--black);
+        font-size: 1.1rem;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    .menu-toggle.active i::before {
+        content: '\f00d';
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+/* Torna o container flex para centralizar */
+.footer-logo,
+.footer-links,
+.footer-contact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+}
+
+    
+    .footer-links h4::after,
+    .footer-contact h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+}
+
+/* Celulares (até 575px) */
+@media (max-width: 575.98px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .btn {
+        padding: 10px 25px;
+        font-size: 0.85rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .depoimento-item {
+        padding: 25px 15px;
+    }
+    
+    .depoimento-texto {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .whatsapp-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .navbar {
+        padding: 15px 0;
+    }
+    
+    .navbar.scrolled {
+        padding: 10px 0;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        width: 80%;
+        right: -80%;
+    }
+    
+    .contato-form {
+        padding: 20px 15px;
+    }
+    
+    /* CSS removido - classe .membro-equipe não utilizada (equipe está no HTML estático) */
+}
+
+/* Dispositivos muito pequenos (até 375px) */
+@media (max-width: 375px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1rem;
+    }
+    
+    .section-header h2 {
+        font-size: 1.4rem;
+    }
+    
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.8rem;
+    }
+    
+    .depoimento-texto {
+        padding: 0 10px;
+    }
+    
+    .depoimento-texto::before,
+    .depoimento-texto::after {
+        font-size: 2.5rem;
+    }
+    
+    .depoimento-texto::before {
+        top: -15px;
+    }
+    
+    .depoimento-texto::after {
+        bottom: -30px;
+    }
+    
+    .whatsapp-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+}
+
+/* Altura pequena (para dispositivos com altura limitada) */
+@media (max-height: 600px) {
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 0 60px;
+    }
+    
+    .hero-content {
+        margin-top: 60px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    
+    .hero .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    
+    .scroll-down {
+        display: none;
+    }
+}
+
+/* Orientação paisagem */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        padding: 80px 0 40px;
+    }
+    
+    .hero-content {
+        margin-top: 40px;
+    }
+    
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero .subtitle {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .btn {
+        padding: 6px 15px;
+        font-size: 0.8rem;
+    }
+    
+    .section {
+        padding: 40px 0;
+    }
+}
+
+
+
